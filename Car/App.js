@@ -2,10 +2,10 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View } from 'react-native';
-import AnnouncementsScreen from './AnnouncementsScreen';
-import HomeScreen from './HomeScreen';
-import BookingScreen from './BookingScreen';
-import SettingsScreen from './SettingsScreen';
+import AnnouncementsScreen from '../Screens/AnnouncementsScreen';
+import HomeScreen from '../Screens/HomeScreen';
+import BookingScreen from '../Screens/BookingScreen';
+import SettingsScreen from '../Screens/SettingsScreen';
 import Icon from 'react-native-vector-icons/Feather';
 
 const Tab = createBottomTabNavigator();
