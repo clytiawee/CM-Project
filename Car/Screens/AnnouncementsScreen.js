@@ -2,9 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-const announcements = [
-  {}, {}, {}, {}, {}
-];
+const announcements = [{}, {}, {}, {}, {}]; // placeholder, replace with real data if needed
 
 export default function AnnouncementsScreen() {
   return (
@@ -14,12 +12,13 @@ export default function AnnouncementsScreen() {
         data={announcements}
         renderItem={() => (
           <View style={styles.row}>
-            <Icon name="info" size={33} color="#222" style={{ margin: 15 }} />
+            <Icon name="info" size={33} color="#222" style={{ marginLeft: 15, marginRight: 15 }} />
             <View style={styles.line} />
           </View>
         )}
         keyExtractor={(_, i) => String(i)}
         ItemSeparatorComponent={() => <View style={styles.spacer}></View>}
+        contentContainerStyle={{ paddingBottom: 30 }}
       />
     </View>
   );
@@ -28,7 +27,11 @@ export default function AnnouncementsScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#F7F7FB', paddingHorizontal: 22 },
   header: { fontSize: 34, fontWeight: 'bold', marginVertical: 16 },
-  row: { flexDirection: 'row', alignItems: 'center' },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    minHeight: 60,
+  },
   line: {
     height: 1,
     backgroundColor: '#BCCCDC',

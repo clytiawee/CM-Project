@@ -11,10 +11,9 @@ export default function SettingsScreen() {
       />
       <Text style={styles.name}>Name</Text>
       <View style={styles.menu}>
-        {['Display Name', 'Email', 'Password', 'Notifications', 'Student ID', 'Permissons'].map(label => (
+        {['Profile Settings','Notifications',].map(label => (
           <TouchableOpacity key={label} style={styles.menuItem}>
             <Text style={styles.menuText}>{label}</Text>
-            <Text style={styles.arrow}>&gt;</Text>
           </TouchableOpacity>
         ))}
         <TouchableOpacity style={styles.menuItem}>
@@ -29,7 +28,7 @@ const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#F7F7FB', alignItems: 'center' },
   header: { fontWeight: 'bold', fontSize: 34, alignSelf: 'flex-start', marginLeft: 22, marginTop: 18 },
   avatar: { height: 90, width: 90, borderRadius: 70, marginTop: 14 },
-  name: { fontSize: 22, fontWeight: 'bold', marginVertical: 10 },
+  name: { fontSize: 30, fontWeight: 'bold', marginVertical: 10, marginTop: -80 },
   menu: { marginTop: 13, alignSelf: 'stretch', marginHorizontal: 20 },
   menuItem: {
     backgroundColor: '#fff', flexDirection: 'row',

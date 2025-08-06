@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native'; 
 
 const currentBookings = [
   { name: "Basketball", amount: 2 },
@@ -10,6 +11,7 @@ const currentBookings = [
 ];
 
 export default function HomeScreen() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Hi, User</Text>
@@ -34,10 +36,14 @@ export default function HomeScreen() {
       </View>
 
       <View style={styles.row}>
-        <TouchableOpacity style={styles.bookEquipCard}>
-          <Text style={styles.bookEquipText}>Book Equipment</Text>
-        </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.bookEquipCard}
+        onPress={() => navigation.navigate('Booking')}>
+        <Text style={styles.bookEquipText}>Book Equipment</Text>
+      </TouchableOpacity>
       </View>
+
+      
 
       <TouchableOpacity style={styles.deadlineCard}>
         <Text style={styles.deadlineText}>No Outstanding Deadlines</Text>
@@ -120,12 +126,14 @@ const styles = StyleSheet.create({
     fontSize: 13
   },
   bookEquipCard: {
+    width: '100%',
+    marginTop: 16,
     flex: 1,
     backgroundColor: '#C8D2DC',
     borderRadius: cardRadius,
-    padding: 22,
+    padding: 30,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   bookEquipText: {
     fontWeight: 'bold',
@@ -140,6 +148,7 @@ const styles = StyleSheet.create({
     padding: 30,
     alignItems: 'center',
     justifyContent: 'center',
+
   },
   deadlineText: {
     fontWeight: 'bold',

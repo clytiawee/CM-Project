@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, FlatList, TouchableOpacity, Image } from 'react-native';
 
 const items = [
-  { id: '1', name: 'Basketball', stock: 10, img: require('./assets/basketball.png') },
-  { id: '2', name: 'Football', stock: 25, img: require('./assets/football.png') },
-  { id: '3', name: 'Badminton Racket', stock: 5, img: require('./assets/badminton racket.png') },
-  { id: '4', name: 'Frisbee', stock: 1, img: require('./assets/frisbee.png') },
+  { id: '1', name: 'Basketball', stock: 10,  },
+  { id: '2', name: 'Football', stock: 25,  },
+  { id: '3', name: 'Badminton Racket', stock: 5, },
+  { id: '4', name: 'Frisbee', stock: 1, },
 ];
 
 export default function BookingScreen() {
