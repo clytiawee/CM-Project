@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 38,
     fontWeight: 'bold',
-    marginBottom: 12
+    marginBottom: 100
   },
   searchRow: {
     flexDirection: 'row',
