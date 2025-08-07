@@ -8,12 +8,12 @@ const items = [
   { id: '4', name: 'Frisbee', stock: 1, },
 ];
 
-export default function BookingScreen() {
+export default function LoanScreen() {
   const [search, setSearch] = useState('');
   const filtered = items.filter(i => i.name.toLowerCase().includes(search.toLowerCase()));
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Booking</Text>
+      <Text style={styles.header}>Loaning</Text>
       <View style={styles.searchRow}>
         <TextInput
           placeholder="Search items"

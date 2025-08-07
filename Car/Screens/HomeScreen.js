@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native'; 
 
-const currentBookings = [
+const currentLoanings = [
   { name: "Basketball", amount: 2 },
   { name: "Cones", amount: 10 },
   { name: "Frisbee", amount: 1 },
@@ -21,10 +21,10 @@ export default function HomeScreen() {
       </View>
 
       <View style={styles.row}>
-        <View style={styles.bookingsCard}>
-          <Text style={styles.cardHeader}>Current Bookings</Text>
-          {currentBookings.map((item) => (
-            <Text style={styles.bookingItem} key={item.name}>
+        <View style={styles.loaningCard}>
+          <Text style={styles.cardHeader}>Current Loans</Text>
+          {currentLoanings.map((item) => (
+            <Text style={styles.loaningItem} key={item.name}>
               • {item.name} x{item.amount}
             </Text>
           ))}
@@ -38,8 +38,8 @@ export default function HomeScreen() {
       <View style={styles.row}>
       <TouchableOpacity
         style={styles.bookEquipCard}
-        onPress={() => navigation.navigate('Booking')}>
-        <Text style={styles.bookEquipText}>Book Equipment</Text>
+        onPress={() => navigation.navigate('Loaning')}>
+        <Text style={styles.bookEquipText}>Loan Equipment</Text>
       </TouchableOpacity>
       </View>
 
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     justifyContent: 'flex-start',
   },
-  bookingsCard: {
+  loaningCard: {
     flex: 1.2,
     backgroundColor: '#2E4576',
     borderRadius: cardRadius,
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     fontSize: 19,
     marginBottom: 7
   },
-  bookingItem: {
+  loaningItem: {
     color: '#fff',
     fontSize: 15,
     marginBottom: 2,

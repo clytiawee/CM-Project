@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View } from 'react-native'; 
 import AnnouncementsScreen from './Screens/AnnouncementsScreen';
 import HomeScreen from './Screens/HomeScreen';
-import BookingScreen from './Screens/BookingScreen';
+import LoanScreen from './Screens/LoanScreen';
 import SettingsScreen from './Screens/SettingsScreen';
 import Icon from 'react-native-vector-icons/Feather';
 
@@ -23,7 +23,7 @@ export default function App() {
               return <Icon name="info" size={24} color={color} />;
             if (route.name === 'Settings')
               return <Icon name="settings" size={24} color={color} />;
-            if (route.name === 'Booking')
+            if (route.name === 'Loaning')
               return <Icon name="list" size={24} color={color} />;
           },
           tabBarShowLabel: false,
@@ -35,7 +35,7 @@ export default function App() {
       >
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Announcements" component={AnnouncementsScreen}/>
-        <Tab.Screen name="Booking" component={BookingScreen} />
+        <Tab.Screen name="Loaning" component={LoanScreen} />
         <Tab.Screen name="Settings" component={SettingsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
